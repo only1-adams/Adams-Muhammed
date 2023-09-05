@@ -1,27 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+	font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	@apply bg-primary;
+}
+
+.techShowcase {
+	animation: customMarquee 20s linear infinite;
+}
+
+@keyframes customMarquee {
+	from {
+		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(calc(-100% - 7.2rem));
+		-webkit-transform: translateX(calc(-100% - 7.2rem));
+		-moz-transform: translateX(calc(-100% - 7.2rem));
+	}
+}
+
+@media only screen and (min-width: 820px) and (max-width: 820px) {
+	#roundImage {
+		@apply !right-[53%];
+	}
+}
+
+@media only screen and (min-width: 412px) and (max-width: 470px) {
+	#roundImage {
+		@apply !right-[16%];
+	}
 }
