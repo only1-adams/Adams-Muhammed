@@ -1,5 +1,4 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import RootLayoutContent from "./components/RootLayoutContent";
 import "./globals.css";
 
 export const metadata = {
@@ -9,13 +8,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	return (
-		<html lang="en">
-			<body className="font-custom">
-				<Header />
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+	return <RootLayoutContent>{children}</RootLayoutContent>;
 }
