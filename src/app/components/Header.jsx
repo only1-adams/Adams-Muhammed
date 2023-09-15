@@ -14,7 +14,7 @@ export default function Header() {
 	const sectionToScrollTo = params.get("section");
 
 	useEffect(() => {
-		if (sectionToScrollTo) {
+		if (sectionToScrollTo === typeof String) {
 			const targetSection = document.getElementById(sectionToScrollTo);
 			targetSection.scrollIntoView({
 				behavior: "smooth",
