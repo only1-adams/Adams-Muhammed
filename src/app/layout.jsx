@@ -8,5 +8,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	return <RootLayoutContent>{children}</RootLayoutContent>;
+	return (
+		<html lang="en">
+			<body className="font-custom overflow-hidden">
+				<RootLayoutContent>{children}</RootLayoutContent>
+			</body>
+		</html>
+	);
 }

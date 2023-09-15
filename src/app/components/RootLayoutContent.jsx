@@ -15,16 +15,12 @@ export default function RootLayoutContent({ children }) {
 	}, []);
 
 	return (
-		<html lang="en">
-			<body className="font-custom overflow-hidden">
-				<MenuProvider>
-					{!mounted && <Loader />}
-					<Menu />
-					<Header />
-					{children}
-					<Footer />
-				</MenuProvider>
-			</body>
-		</html>
+		<MenuProvider>
+			{!mounted && <Loader />}
+			<Menu />
+			<Header />
+			{children}
+			<Footer />
+		</MenuProvider>
 	);
 }
