@@ -14,11 +14,13 @@ export default function Header() {
 	const sectionToScrollTo = params.get("section");
 
 	useEffect(() => {
-		const targetSection = document.getElementById(sectionToScrollTo);
-		targetSection.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		});
+		if (sectionToScrollTo !== undefined || sectionToScrollTo !== null) {
+			const targetSection = document.getElementById(sectionToScrollTo);
+			targetSection.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		}
 	}, [params, sectionToScrollTo]);
 
 	return (
