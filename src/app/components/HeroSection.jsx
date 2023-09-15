@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { forwardRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+const HeroSection = forwardRef(function HeroSection(props, ref) {
 	return (
 		<section
+			ref={ref}
 			id="home"
 			className="px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem] pt-[2rem] md:pt-[5rem] lg:pt-[7.5rem]">
 			<div className="relative z-[2]">
@@ -65,4 +66,6 @@ export default function HeroSection() {
 			</motion.div>
 		</section>
 	);
-}
+});
+
+export default HeroSection;

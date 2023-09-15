@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Laptop from "./components/icons/Laptop";
@@ -17,11 +18,29 @@ import HeroSection from "./components/HeroSection";
 import FigmaIcon from "./components/icons/FigmaIcon";
 import SlackIcon from "./components/icons/SlackIcon";
 import ProjectsSlide from "./components/ProjectsSlide";
+import Storybook from "./components/icons/Storybook";
+import Vitest from "./components/icons/Vitest";
+import { useInViewport } from "ahooks";
+import { useRef } from "react";
 
 export default function HomePage() {
+	const homeRef = useRef(null);
+	const servicesRef = useRef(null);
+	const projectsRef = useRef(null);
+	const contactRef = useRef(null);
+
+	const [homeInViewport, homeRatio] = useInViewport(homeRef, {
+		threshold: [0, 0.25, 0.5, 0.75, 1],
+	});
+
 	return (
 		<main className="pt-[10rem]">
-			<HeroSection />
+			{homeInViewport ? (
+				<span className="font-bold text-4xl text-white">
+					Yes oh {homeRatio}
+				</span>
+			) : null}
+			<HeroSection ref={homeRef} />
 			<section className="mt-16 md:mt-28">
 				<div className="flex items-center justify-center gap-5 text-[1.8rem] md:text-[2.6rem] text-white font-bold">
 					<h2>Various Tools & Technologies I use</h2>
@@ -43,6 +62,8 @@ export default function HomePage() {
 							<Redis />
 							<DockerIcon />
 							<SlackIcon />
+							<Storybook />
+							<Vitest />
 						</div>
 						<div className="techShowcase flex items-center h-full gap-x-[7.2rem] w-max">
 							<FigmaIcon />
@@ -58,11 +79,16 @@ export default function HomePage() {
 							<Redis />
 							<DockerIcon />
 							<SlackIcon />
+							<Storybook />
+							<Vitest />
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="services" className="mt-12 overflow-hidden">
+			<section
+				ref={servicesRef}
+				id="services"
+				className="mt-12 overflow-hidden">
 				<div className="w-max flex gap-x-[5px]">
 					<Dots />
 					<Dots />
@@ -114,9 +140,9 @@ export default function HomePage() {
 							</span>
 						</div>
 						<p className="text-2xl text-white font-light leading-[2.5rem]">
-							{`For backend development, my toolkit includes Node.js, Express, and MongoDB and more. I harness the power of these technologies to build robust and efficient server-side systems. With a focus on performance and scalability, I ensure that your data is securely managed and your applications run seamlessly.
+							{`For backend development, my toolkit includes Node.js, Express, and MongoDB and more. I harness the power of these technologies to build robust and efficient server-side systems. With a focus on performance and scalability, I ensure that data is securely managed and the application runs seamlessly.
 
-							I also follow rigorous testing procedures to guarantee the reliability of my code, and I take care to thoroughly document it for the benefit of your team and future developers`}
+							I also follow rigorous testing procedures to guarantee the reliability of my code, and I take care to thoroughly document it for the benefit of the team and future developers`}
 						</p>
 					</div>
 					<div className="flex flex-col gap-y-7">
@@ -171,10 +197,14 @@ export default function HomePage() {
 			</section>
 			<section
 				id="projects"
+				ref={projectsRef}
 				className="mt-14 md:mt-20 px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem]">
 				<ProjectsSlide />
 			</section>
-			<section id="contact" className="mt-12 h-[339px] relative">
+			<section
+				ref={contactRef}
+				id="contact"
+				className="mt-12 h-[339px] relative">
 				<Image
 					src={"/get-in-touch.png"}
 					width={1280}
