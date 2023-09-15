@@ -35,11 +35,11 @@ export default function HomePage() {
 
 	return (
 		<main className="pt-[10rem]">
-			{homeInViewport ? (
+			{/* {homeInViewport ? (
 				<span className="font-bold text-4xl text-white">
 					Yes oh {homeRatio}
 				</span>
-			) : null}
+			) : null} */}
 			<HeroSection ref={homeRef} />
 			<section className="mt-16 md:mt-28">
 				<div className="flex items-center justify-center gap-5 text-[1.8rem] md:text-[2.6rem] text-white font-bold">
