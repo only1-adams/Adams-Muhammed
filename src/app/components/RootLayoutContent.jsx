@@ -16,8 +16,7 @@ export default function RootLayoutContent({ children }) {
 
 	return (
 		<MenuProvider>
-			{/* {!mounted && <Loader />} */}
-			<Loader />
+			{!mounted && <Loader />}
 			<Menu />
 			<Header />
 			{children}
