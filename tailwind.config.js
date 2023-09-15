@@ -13,8 +13,6 @@ module.exports = {
 				customWhite: "#E0E1DD",
 			},
 			fontFamily: {
-				// custom: " 'Bricolage Grotesque', sans-serif",
-				// unbounded: "'Unbounded', sans-serif",
 				custom: ["var(--font-bricolage)"],
 				unbounded: ["var(--font-unbounded)"],
 			},
