@@ -10,10 +10,12 @@ export default function SocialLinks({ displayClass }) {
 			<Link href={"/"}>
 				<Behance />
 			</Link>
-			<Link href={"/"}>
+			<Link href={"https://twitter.com/only1_adams"}>
 				<Twitter />
 			</Link>
-			<Link href={"/"}>
+			<Link
+				target="_blank"
+				href={"https://www.linkedin.com/in/adams-muhammed-399474218/"}>
 				<LinkedIn />
 			</Link>
 		</div>

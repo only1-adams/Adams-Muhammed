@@ -8,7 +8,7 @@ export default function Behance() {
 			viewBox="0 0 25 25"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg">
-			<g clip-path="url(#clip0_59_3398)">
+			<g clipPath="url(#clip0_59_3398)">
 				<path
 					d="M19.3886 0H5.61136C2.51229 0 0 2.51229 0 5.61136V19.3886C0 22.4877 2.51229 25 5.61136 25H19.3886C22.4877 25 25 22.4877 25 19.3886V5.61136C25 2.51229 22.4877 0 19.3886 0Z"
 					fill="white"

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import ReadMore from "./components/icons/ReadMore";
 import Laptop from "./components/icons/Laptop";
 import Git from "./components/icons/Git";
 import GitHub from "./components/icons/GitHub";
@@ -15,6 +14,9 @@ import NodeJs from "./components/icons/NodeJs";
 import DockerIcon from "./components/icons/DockerIcon";
 import Dots from "./components/icons/Dots";
 import HeroSection from "./components/HeroSection";
+import FigmaIcon from "./components/icons/FigmaIcon";
+import SlackIcon from "./components/icons/SlackIcon";
+import ProjectsSlide from "./components/ProjectsSlide";
 
 export default function HomePage() {
 	return (
@@ -28,6 +30,7 @@ export default function HomePage() {
 				<div className="h-[8.5rem] bg-white mt-10 overflow-hidden w-full">
 					<div className="w-max flex items-center h-full gap-x-[7.2rem]">
 						<div className="techShowcase flex items-center h-full gap-x-[7.2rem] w-max">
+							<FigmaIcon />
 							<Git />
 							<GitHub />
 							<Javascript />
@@ -39,8 +42,10 @@ export default function HomePage() {
 							<Mongodb />
 							<Redis />
 							<DockerIcon />
+							<SlackIcon />
 						</div>
 						<div className="techShowcase flex items-center h-full gap-x-[7.2rem] w-max">
+							<FigmaIcon />
 							<Git />
 							<GitHub />
 							<Javascript />
@@ -52,11 +57,12 @@ export default function HomePage() {
 							<Mongodb />
 							<Redis />
 							<DockerIcon />
+							<SlackIcon />
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className="mt-12 overflow-hidden">
+			<section id="services" className="mt-12 overflow-hidden">
 				<div className="w-max flex gap-x-[5px]">
 					<Dots />
 					<Dots />
@@ -95,13 +101,7 @@ export default function HomePage() {
 							</span>
 						</div>
 						<p className="text-2xl text-white font-light leading-[2.5rem]">
-							I am a passionate software engineer with 3+ years of experience, I
-							specialize in frontend development with a strong passion for
-							writing clean and efficient code. With experience in Vue.js,
-							Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-							Django, I possess a diverse skill set to tackle various
-							development challenges and I enjoy leveraging best practices to
-							solve problems and always ensure thorough testing of my code....
+							{`In frontend development, my approach incorporates CDD (Component Driven Development) for UI. I meticulously design and test modular components to ensure seamless integration and consistent quality. I also prioritize thorough documentation to provide clarity and ease of maintenance for your team and any future developers. My ultimate goal is to craft exceptional user experiences (UX), offering intuitive design and responsive interfaces for a positive and memorable interaction`}
 						</p>
 					</div>
 					<div className="flex flex-col gap-y-7">
@@ -114,13 +114,9 @@ export default function HomePage() {
 							</span>
 						</div>
 						<p className="text-2xl text-white font-light leading-[2.5rem]">
-							I am a passionate software engineer with 3+ years of experience, I
-							specialize in frontend development with a strong passion for
-							writing clean and efficient code. With experience in Vue.js,
-							Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-							Django, I possess a diverse skill set to tackle various
-							development challenges and I enjoy leveraging best practices to
-							solve problems and always ensure thorough testing of my code....
+							{`For backend development, my toolkit includes Node.js, Express, and MongoDB and more. I harness the power of these technologies to build robust and efficient server-side systems. With a focus on performance and scalability, I ensure that your data is securely managed and your applications run seamlessly.
+
+							I also follow rigorous testing procedures to guarantee the reliability of my code, and I take care to thoroughly document it for the benefit of your team and future developers`}
 						</p>
 					</div>
 					<div className="flex flex-col gap-y-7">
@@ -128,16 +124,12 @@ export default function HomePage() {
 							<span className="inline-block bg-clip-text bg-customGradient text-[6.2rem] font-extrabold font-unbounded text-transparent leading-none">
 								03
 							</span>
-							<span className="text-white text-3xl font-bold">UX Design</span>
+							<span className="text-white text-3xl font-bold">
+								UX/UI Design
+							</span>
 						</div>
 						<p className="text-2xl text-white font-light leading-[2.5rem]">
-							I am a passionate software engineer with 3+ years of experience, I
-							specialize in frontend development with a strong passion for
-							writing clean and efficient code. With experience in Vue.js,
-							Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-							Django, I possess a diverse skill set to tackle various
-							development challenges and I enjoy leveraging best practices to
-							solve problems and always ensure thorough testing of my code....
+							{`I excel in crafting visually captivating and user-friendly interfaces. My approach combines creativity and usability to ensure that designs resonate with your audience and deliver an exceptional user experience. `}
 						</p>
 					</div>
 					<div className="flex flex-col gap-y-7">
@@ -145,16 +137,12 @@ export default function HomePage() {
 							<span className="inline-block bg-clip-text bg-customGradient text-[6.2rem] font-extrabold font-unbounded text-transparent leading-none">
 								04
 							</span>
-							<span className="text-white text-3xl font-bold">UI Design</span>
+							<span className="text-white text-3xl font-bold">
+								Consultation and Support
+							</span>
 						</div>
 						<p className="text-2xl text-white font-light leading-[2.5rem]">
-							I am a passionate software engineer with 3+ years of experience, I
-							specialize in frontend development with a strong passion for
-							writing clean and efficient code. With experience in Vue.js,
-							Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-							Django, I possess a diverse skill set to tackle various
-							development challenges and I enjoy leveraging best practices to
-							solve problems and always ensure thorough testing of my code....
+							{`I offer expert guidance and assistance to help you navigate the digital landscape. Whether you need advice, insights, or troubleshooting, I'm here to ensure that your projects run smoothly. With a focus on clear communication and reliable assistance, I aim to be your trusted partner in achieving your digital goals`}
 						</p>
 					</div>
 				</div>
@@ -181,81 +169,12 @@ export default function HomePage() {
 					<Dots />
 				</div>
 			</section>
-			<section className="mt-14 md:mt-20 px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem]">
-				<h2 className="text-[3.8rem] text-white font-bold">Projects</h2>
-				<div className="w-full overflow-auto">
-					<div className="mt-12 w-max flex gap-x-12">
-						<div className="shrink-0 flex flex-col gap-y-10 w-[353px] md:w-[530px]">
-							<div className="w-full h-[253px] md:h-[390px] rounded-lg overflow-hidden">
-								<Image
-									src={"/forumpreview.png"}
-									height={390}
-									width={530}
-									alt="klef9ja preview"
-									className="w-full h-full object-cover object-top"
-								/>
-							</div>
-							<div className="flex items-center justify-between">
-								<span className="text-[2.5rem] font-bold text-white">
-									Ask a Dev
-								</span>
-								<Link
-									href={"/"}
-									className="py-5 px-20 flex items-center justify-center gap-6 text-2xl font-medium text-white border-[1.5px] border-white rounded-full">
-									View
-									<span>
-										<ReadMore />
-									</span>
-								</Link>
-							</div>
-							<p className="text-2xl text-[#F5CFE4] leading-[2.5rem]">
-								I am a passionate software engineer with 3+ years of experience,
-								I specialize in frontend development with a strong passion for
-								writing clean and efficient code. With experience in Vue.js,
-								Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-								Django, I possess a diverse skill set to tackle various
-								development challenges and I enjoy leveraging best practices to
-								solve problems and always ensure thorough testing of my code....
-							</p>
-						</div>
-						<div className="shrink-0 flex flex-col gap-y-10 w-[353px] md:w-[530px]">
-							<div className="w-full h-[253px] md:h-[390px] rounded-lg overflow-hidden">
-								<Image
-									src={"/klef9japreview.png"}
-									height={390}
-									width={530}
-									alt="klef9ja preview"
-									className="w-full h-full object-cover"
-								/>
-							</div>
-							<div className="flex items-center justify-between">
-								<span className="text-[2.5rem] font-bold text-white">
-									Klef9ja Blog
-								</span>
-								<Link
-									href={"https://www.klef9jablog.com"}
-									target="_blank"
-									className="py-5 px-20 flex items-center justify-center gap-6 text-2xl font-medium text-white border-[1.5px] border-white rounded-full">
-									View
-									<span>
-										<ReadMore />
-									</span>
-								</Link>
-							</div>
-							<p className="text-2xl text-[#F5CFE4] leading-[2.5rem]">
-								I am a passionate software engineer with 3+ years of experience,
-								I specialize in frontend development with a strong passion for
-								writing clean and efficient code. With experience in Vue.js,
-								Nuxt.js, React.js, Next.js, Node.js, MongoDB and a touch of
-								Django, I possess a diverse skill set to tackle various
-								development challenges and I enjoy leveraging best practices to
-								solve problems and always ensure thorough testing of my code....
-							</p>
-						</div>
-					</div>
-				</div>
+			<section
+				id="projects"
+				className="mt-14 md:mt-20 px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem]">
+				<ProjectsSlide />
 			</section>
-			<section className="mt-12 h-[339px] relative">
+			<section id="contact" className="mt-12 h-[339px] relative">
 				<Image
 					src={"/get-in-touch.png"}
 					width={1280}
@@ -269,7 +188,7 @@ export default function HomePage() {
 						Let&apos;s talk about it
 					</span>
 					<Link
-						href={"/"}
+						href={"mailto:muhammedadam4544@gmail.com"}
 						className="py-5 px-20 flex items-center justify-center gap-6 text-2xl font-medium text-white border-[1.5px] border-white rounded-full bg-primary">
 						Get in touch
 					</Link>

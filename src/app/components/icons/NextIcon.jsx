@@ -46,7 +46,7 @@ export default function NextIcon() {
 					y2="37.95"
 					gradientUnits="userSpaceOnUse">
 					<stop stopColor="white" />
-					<stop offset="1" stopColor="white" stop-opacity="0" />
+					<stop offset="1" stopColor="white" stopOpacity="0" />
 				</linearGradient>
 				<linearGradient
 					id="paint1_linear_44_37"
@@ -56,7 +56,7 @@ export default function NextIcon() {
 					y2="25.4375"
 					gradientUnits="userSpaceOnUse">
 					<stop stopColor="white" />
-					<stop offset="1" stopColor="white" stop-opacity="0" />
+					<stop offset="1" stopColor="white" stopOpacity="0" />
 				</linearGradient>
 				<clipPath id="clip0_44_37">
 					<rect

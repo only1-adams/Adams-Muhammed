@@ -4,6 +4,7 @@ import Header from "./Header";
 import Menu from "./Menu";
 import Footer from "./Footer";
 import Loader from "./Loader";
+import MenuProvider from "./providers/MenuProvider";
 
 export default function RootLayoutContent({ children }) {
 	const [mounted, setMounted] = useState(false);
@@ -16,11 +17,13 @@ export default function RootLayoutContent({ children }) {
 	return (
 		<html lang="en">
 			<body className="font-custom overflow-hidden">
-				{!mounted && <Loader />}
-				{/* <Menu /> */}
-				<Header />
-				{children}
-				<Footer />
+				<MenuProvider>
+					{!mounted && <Loader />}
+					<Menu />
+					<Header />
+					{children}
+					<Footer />
+				</MenuProvider>
 			</body>
 		</html>
 	);

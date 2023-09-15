@@ -6,6 +6,7 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -89,6 +90,15 @@ body {
 	transform-origin: top left;
 	transform: rotate(-55deg);
 	filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+}
+
+.projectsSlide {
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.projectsSlide::-webkit-scrollbar {
+	display: none;
 }
 
 @keyframes radar81 {
