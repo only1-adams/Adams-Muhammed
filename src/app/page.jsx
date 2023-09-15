@@ -184,7 +184,7 @@ export default function HomePage() {
 				/>
 				<div className="absolute w-full h-full top-0 flex flex-col gap-y-7 items-center justify-center">
 					<span className="text-3xl font-light text-white">Have an idea?</span>
-					<span className="text-[4.5rem] font-bold text-white">
+					<span className="text-[3rem] md:text-[4.5rem] font-bold text-white">
 						Let&apos;s talk about it
 					</span>
 					<Link
