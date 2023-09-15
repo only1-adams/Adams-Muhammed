@@ -1,5 +1,5 @@
-import RootLayoutContent from "./components/RootLayoutContent";
 import "./globals.css";
+import RootLayoutContent from "./components/RootLayoutContent";
 
 export const metadata = {
 	title: "Adams Muhammed || Software Engineer & UX/UI Designer",

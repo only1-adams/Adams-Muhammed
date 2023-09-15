@@ -8,13 +8,13 @@ import GithubSocial from "./icons/GithubSocial";
 export default function SocialLinks({ displayClass }) {
 	return (
 		<div className={`items-center gap-x-[4.1rem] ${displayClass}`}>
-			<Link href={"https://github.com/only1-adams"}>
+			<Link target="_blank" href={"https://github.com/only1-adams"}>
 				<GithubSocial />
 			</Link>
-			<Link href={"https://www.behance.net/muhammedadams"}>
+			<Link target="_blank" href={"https://www.behance.net/muhammedadams"}>
 				<Behance />
 			</Link>
-			<Link href={"https://twitter.com/only1_adams"}>
+			<Link target="_blank" href={"https://twitter.com/only1_adams"}>
 				<Twitter />
 			</Link>
 			<Link
