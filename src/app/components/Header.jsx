@@ -30,7 +30,7 @@ export default function Header() {
 				<Link
 					href={"/?section=home"}
 					className={`rounded-[94px] text-2xl font-semibold px-[24px] h-[50px] flex items-center justify-center ${
-						sectionToScrollTo === "home"
+						sectionToScrollTo === "home" || sectionToScrollTo === null
 							? "bg-primary text-white"
 							: "bg-transparent text-primary"
 					}`}>
