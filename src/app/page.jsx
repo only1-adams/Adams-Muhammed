@@ -21,7 +21,7 @@ import ProjectsSlide from "./components/ProjectsSlide";
 import Storybook from "./components/icons/Storybook";
 import Vitest from "./components/icons/Vitest";
 import { useInViewport } from "ahooks";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function HomePage() {
 	const homeRef = useRef(null);
@@ -30,16 +30,13 @@ export default function HomePage() {
 	const contactRef = useRef(null);
 
 	const [homeInViewport, homeRatio] = useInViewport(homeRef, {
-		threshold: [0, 0.25, 0.5, 0.75, 1],
+		threshold: [0, 0.25, 0.5, 0.75],
 	});
+
+	useEffect(() => {}, [homeInViewport]);
 
 	return (
 		<main className="pt-[10rem]">
-			{/* {homeInViewport ? (
-				<span className="font-bold text-4xl text-white">
-					Yes oh {homeRatio}
-				</span>
-			) : null} */}
 			<HeroSection ref={homeRef} />
 			<section className="mt-16 md:mt-28">
 				<div className="flex items-center justify-center gap-5 text-[1.8rem] md:text-[2.6rem] text-white font-bold">

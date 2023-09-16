@@ -59,7 +59,9 @@ const HeroSection = forwardRef(function HeroSection(props, ref) {
 				transition={{ ease: "linear", duration: 0.3, delay: 0.6 }}
 				className="mt-8 flex items-center gap-x-8">
 				<Link
-					href={"/"}
+					href={"/My Resume.pdf"}
+					download={"Adams Muhammed's Resume"}
+					target="_blank"
 					className="py-5 px-5 md:px-20 flex items-center justify-center gap-6 text-2xl font-medium text-white border-[1.5px] border-white rounded-full">
 					Download Resume
 				</Link>
