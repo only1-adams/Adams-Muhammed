@@ -9,7 +9,7 @@ const HeroSection = forwardRef(function HeroSection(props, ref) {
 		<section
 			ref={ref}
 			id="home"
-			className="px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem] pt-[2rem] md:pt-[5rem] lg:pt-[7.5rem]">
+			className="px-8 md:px-[2rem] lg:px-[4rem] xl:px-[10rem] mt-[2rem] md:mt-[5rem] lg:mt-[7.5rem]">
 			<div className="relative z-[2]">
 				<motion.h1
 					initial={{ scale: 0.4, opacity: 0 }}
