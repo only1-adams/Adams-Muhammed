@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Logo from "./Logo";
 import SocialLinks from "./SocialLinks";
 import HamburgerIcon from "./icons/HamburgerIcon";
